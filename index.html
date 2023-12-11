@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz Checker</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark">
+    <div class="container mt-5 text-white">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+
+                <div class="text-center">
+                    <label for="inp">Enter a number:</label>
+                    <input type="text" class="form-control" id="inp">
+                </div>
+
+                <div class="text-center mt-3">
+                    <button class="btn btn-primary" onclick="check()">CHECK</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const check = () => {
+            const inp = document.getElementById('inp');
+
+            if (inp.value === "" || isNaN(Number(inp.value))) {
+                alert("Enter a number");
+                inp.value = "";
+            } else if (inp.value % 5 === 0 && inp.value % 3 === 0) {
+                alert("FizzBuzz");
+                inp.value = "";
+            } else if (inp.value % 3 === 0) {
+                alert("Fizz");
+                inp.value = "";
+            } else if (inp.value % 5 === 0) {
+                alert("Buzz");
+                inp.value = "";
+            } else {
+                alert("Nooo");
+                inp.value = "";
+            }
+        }
+    </script>
+</body>
+</html>
